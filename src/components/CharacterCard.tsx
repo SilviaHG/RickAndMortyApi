@@ -1,21 +1,29 @@
 import React from 'react'
 import { Character } from '../types/character';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 interface Props{
     character:Character;
 }
 
 const CharacterCard=({character}:Props) => {
+  
+    const navigation = useNavigation(); // Obtiene la navegación
+
   return (
     <View style={styles.card}>
-        <Image source={{uri:character.image}} style={styles.image}/>
+        <Pressable onPress={() => navigation.navigate("DetailsScreen", { character: character.id })}>
+        <Image source={{ uri: character.image }} style={styles.image} />
+      </Pressable>     
         <Text style={styles.name}>{character.name}</Text>
         <Text>{character.species}-{character.status}</Text>
        
     </View>
   )
 }
+
+ 
 
 const styles = StyleSheet.create({
     card:{
