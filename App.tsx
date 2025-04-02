@@ -19,7 +19,12 @@ export default function App() {
       <Stack.Screen 
         name="Home" 
         component={()=>(      
-        <Drawer.Navigator>
+        <Drawer.Navigator screenOptions={{
+          headerStyle: {
+            backgroundColor: '#9B1B30', // Color de fondo del encabezado
+          },
+          headerTintColor: '#fff', // Color del texto del encabezado
+        }}>
           <Drawer.Screen name="Inicio" component={InitialScreen} />
           <Drawer.Screen name="Personajes" component={HomeScreen} />
         </Drawer.Navigator>)

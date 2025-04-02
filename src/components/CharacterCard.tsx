@@ -1,6 +1,6 @@
 import React from 'react'
 import { Character } from '../types/character';
-import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 interface Props{
