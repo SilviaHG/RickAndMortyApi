@@ -9,7 +9,7 @@ interface Props{
 
 const CharacterCard=({character}:Props) => {
   
-    const navigation = useNavigation(); // Obtiene la navegación
+    const navigation = useNavigation<any>(); // Obtiene la navegación
 
   return (
     <View style={styles.card}>

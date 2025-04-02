@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet, ActivityIndicator, Button, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native'; // Acceder a los parámetros de la navegación
+import { Character } from '../types/character';
 
 const DetailsScreen = () => {
-  const route = useRoute();
+  const route = useRoute<any>();
   const { character } = route.params; // Obtiene el ID del personaje pasado como parámetro
 
    const navigation = useNavigation(); // Obtiene la navegación
 
-  const [characterDetails, setCharacterDetails] = useState(null);
+  const [characterDetails, setCharacterDetails] = useState<Character|null>(null);
   const [loading, setLoading] = useState(true);
   
   const [isPressed, setIsPressed] = useState(false); // Estado para controlar si el botón está presionado

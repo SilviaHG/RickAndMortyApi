@@ -9,8 +9,8 @@ const DrawerNavigator = () => {
   return (
     
     <Drawer.Navigator initialRouteName='Inicio'>
-        <Drawer.Screen name='Inicio' component={HomeScreen}/>
-        <Drawer.Screen name='Detalles' component={DetailsScreen}/>
+       <Drawer.Screen name="Home" component={HomeScreen} />
+       <Drawer.Screen name="Details" component={DetailsScreen} />
     </Drawer.Navigator>
     
   )
